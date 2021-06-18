@@ -1,0 +1,12 @@
+{
+  "name": "lpl-onboarding-frontend",
+  "description": "",
+  "env": {},
+  "formation": {},
+  "addons": [],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
