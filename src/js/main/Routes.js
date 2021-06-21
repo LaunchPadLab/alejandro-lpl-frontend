@@ -1,8 +1,7 @@
 import React from 'react'
 import { Route, Redirect, Switch } from 'react-router'
 import Layout from './Layout'
-import { Routes as HomeRoutes } from './home'
-import { Routes as StyleguideRoutes } from './styleguide'
+import { Routes as TodoRoutes } from './todos'
 
 const propTypes = {}
 
@@ -12,9 +11,8 @@ function Routes() {
   return (
     <Layout>
       <Switch>
-        <Route path="/home" component={HomeRoutes} />
-        <Route path="/styleguide" component={StyleguideRoutes} />
-        <Redirect path="*" to="/home" />
+        <Route exact path="/todos" component={TodoRoutes} />
+        <Redirect path="*" to="/todos" />
       </Switch>
     </Layout>
   )
