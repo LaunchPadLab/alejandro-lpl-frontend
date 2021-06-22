@@ -10,13 +10,11 @@ const slice = 'root.todo'
 const initialState = {}
 
 const reducer = handleActions({
-  [apiActions.deleteTodo]: setOnSuccess('todos', ({ payload: { data: id } }, state) => {
-    return state.todos.filter(todo => todo.id !== id);
-  }),
   [apiActions.fetchTodos]: setOnSuccess('todos'),
   [apiActions.addTodo]: setOnSuccess('todos', ({ payload: { data: todo } }, state) => {
     return [...state.todos, todo]
   }),
+  [actions.clearTodos]: setOnSuccess('todos', null),
   [apiActions.fetchTodo]: setOnSuccess('todo'),
   [actions.clearTodo]: unsetState('todo'),
   [apiActions.editTodo]: setOnSuccess('todo'),

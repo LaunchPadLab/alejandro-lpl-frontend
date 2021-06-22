@@ -10,7 +10,7 @@ export const todo = PropTypes.shape({
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     descripction: PropTypes.string,
-    completed: PropTypes.bool.isRequired
+    completed: PropTypes.bool
 })
 
 export const Actions = {

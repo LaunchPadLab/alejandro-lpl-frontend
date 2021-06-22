@@ -25,6 +25,7 @@ const propTypes = {
   flashErrorMessage: PropTypes.func.isRequired,
   clearTodo: PropTypes.func.isRequired,
   deleteTodo: PropTypes.func.isRequired,
+  clearTodos: PropTypes.func.isRequired,
 }
 
 const defaultProps = {}
@@ -38,7 +39,8 @@ function TodoShow(
     push,
     flashErrorMessage,
     deleteTodo,
-    isDeleting
+    isDeleting,
+    clearTodos
   }
 ) {
 
@@ -93,7 +95,7 @@ function TodoShow(
               <AlertModal
                 onDelete={() =>
                   deleteTodo(todo.id).then(() => {
-                    // clearTodos()
+                    clearTodos()
                     push('/todos')
                   })
                 }
@@ -125,6 +127,7 @@ const mapDispatchToProps = {
   editTodo: apiActions.editTodo,
   push: routerActions.push,
   flashErrorMessage,
+  clearTodos: actions.clearTodos,
   deleteTodo: apiActions.deleteTodo
 }
 
