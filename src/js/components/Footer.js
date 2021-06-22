@@ -8,7 +8,7 @@ const propTypes = {}
 const defaultProps = {}
 
 function Footer() {
-  return <footer>Client Template Footer</footer>
+  return <footer></footer>
 }
 
 Footer.propTypes = exact(propTypes)

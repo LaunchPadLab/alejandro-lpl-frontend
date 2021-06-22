@@ -11,7 +11,7 @@ function Routes() {
   return (
     <Layout>
       <Switch>
-        <Route exact path="/todos" component={TodoRoutes} />
+        <Route path="/todos" component={TodoRoutes} />
         <Redirect path="*" to="/todos" />
       </Switch>
     </Layout>

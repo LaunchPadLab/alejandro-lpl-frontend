@@ -14,8 +14,8 @@ function Routes ({ match: { path } }) {
   return (
     <Layout title={'My todo list'}>
       <Switch>
-        <Route exact path={ path + '/' } component={ Views.Todos } />
-        <Route path={ path + '/:id' } component={ Views.TodoShow } />
+        <Route exact path={path + '/'} component={Views.Todos} />
+        <Route path={path + '/:id/:action?'} component={Views.TodoShow} />
       </Switch>
     </Layout>
   )
